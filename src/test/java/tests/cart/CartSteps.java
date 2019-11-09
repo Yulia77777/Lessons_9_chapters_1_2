@@ -4,10 +4,10 @@ import framework.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-public class CartSteps {
+class CartSteps {
     private CartPage cartPage = new CartPage();
 
-    public void submitMandatoryFields() {
+    void submitMandatoryFields() {
 
         cartPage.click(cartPage.plusIcn);
         float floatPrice = parseFloatValue(cartPage, cartPage.priceText, "$", "");

@@ -1,4 +1,4 @@
-package tests.createAccount;
+package tests.newAccount;
 
 import framework.base.BaseTest;
 import org.testng.annotations.Test;
@@ -12,9 +12,6 @@ public class NewAccountTest extends BaseTest {
     @Test
     public void enterAllDataExceptForThreeDropdownBoxesAndParseThreeErrors() {
         signInSteps.goToRegistration();
-        accSteps.submitMandatoryFields();
-/*        Basket expected = newAccountSteps.editItemsQuantity();
-        Basket actual = newAccountSteps.checkOrderAmount();
-        Assert.assertEquals(actual, expected);*/
+        //accSteps.submitMandatoryFields();   TODO to refactor, if launched again with TestNG instead of Cucumber
     }
 }

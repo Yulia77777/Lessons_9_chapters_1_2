@@ -8,11 +8,11 @@ import org.testng.annotations.*;
 
 import java.lang.reflect.Method;
 
-public abstract class BaseTest {
+public class BaseTest {
 
-    protected WebDriver driver;
+    private WebDriver driver;
 
-    protected String getRelativePath() {
+    private String getRelativePath() {
         return "/";
     }
 
@@ -22,7 +22,7 @@ public abstract class BaseTest {
     }
 
     @BeforeSuite
-    public void beforeSuite() {
+    public void openBrowser() {
         initDriver();
         driver.manage().window().maximize();
     }
@@ -38,11 +38,11 @@ public abstract class BaseTest {
     }
 
     @AfterSuite
-    public void afterSuite() {
+    public void closeBrowser() {
         driver.quit();
     }
 
-    protected String getBaseURI() {
+    private String getBaseURI() {
         String baseUrl = System.getProperty(Config.VM_PARAM_BASE_URL);
         if(StringUtils.isEmpty(baseUrl)) {
             baseUrl = Config.DEFAULT_BASE_URL;

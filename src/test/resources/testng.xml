@@ -6,7 +6,11 @@
     </listeners>
     <test name="all">
         <packages>
-            <package name="tests.*" />
+            <package name="framework.base" />
         </packages>
+<!--    used for TestNG launch without Cucumber:
+        <packages>
+            <package name="tests.*" />
+        </packages>-->
     </test>
 </suite>

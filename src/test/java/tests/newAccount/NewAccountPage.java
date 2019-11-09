@@ -1,11 +1,11 @@
-package tests.createAccount;
+package tests.newAccount;
 
 import framework.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class NewAccountPage extends BasePage {
+class NewAccountPage extends BasePage {
 
     @FindBy(how = How.ID, using = "id_gender1")
     WebElement mrGenderRad;
@@ -42,5 +42,8 @@ public class NewAccountPage extends BasePage {
 
     @FindBy(how = How.ID, using = "submitAccount")
     WebElement submitAccountBtn;
+
+    @FindBy(how = How.XPATH, using = "//div[@class='alert alert-danger']/p")
+    WebElement validationErrorTxt;
 
 }
