@@ -2,7 +2,7 @@ package tests.newAccount;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.Assert;
+import org.junit.Assert;
 
 
 public class NewAccountSteps {

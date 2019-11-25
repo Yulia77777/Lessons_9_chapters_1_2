@@ -1,8 +1,8 @@
 package tests.cart;
 
 import framework.base.BasePage;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 class CartSteps {
     private CartPage cartPage = new CartPage();
@@ -19,11 +19,11 @@ class CartSteps {
         float total = parseFloatValue(cartPage, cartPage.totalWithoutTaxText, "$", "");
         float tax = parseFloatValue(cartPage, cartPage.totalTaxText, "$", "");
         Float totalSum = parseFloatValue(cartPage, cartPage.totalPriceText, "$", "");
-        Assert.assertEquals(checkPrice, totalProduct);
-        Assert.assertEquals(totalShipping, 2f);
+        Assert.assertEquals(checkPrice, totalProduct, 0);
+        Assert.assertEquals(totalShipping, 2f, 0);
         float expectedTotal = checkPrice + totalShipping;
-        Assert.assertEquals(total, expectedTotal);
-        Assert.assertEquals(tax, 0f);
+        Assert.assertEquals(total, expectedTotal, 0);
+        Assert.assertEquals(tax, 0f, 0);
         float expectedTotalSum = floatPrice + totalShipping;
         //Assert.assertEquals(totalSum, expectedTotalSum);        //TODO
         cartPage.click(cartPage.deleteIcn);

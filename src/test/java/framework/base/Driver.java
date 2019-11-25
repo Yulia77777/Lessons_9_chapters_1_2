@@ -17,6 +17,10 @@ public class Driver {
 
     private static WebDriver driver = null;
 
+    public static void setToNull() {
+        driver = null;
+    }
+
     public static WebDriver getInstance() {
         if (driver != null) {
             return driver;

@@ -1,7 +1,7 @@
 package tests.newAccount;
 
 import framework.base.BaseTest;
-import org.testng.annotations.Test;
+import org.junit.Test;
 import tests.signin.SignInSteps;
 
 public class NewAccountTest extends BaseTest {

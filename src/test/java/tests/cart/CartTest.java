@@ -1,7 +1,7 @@
 package tests.cart;
 
 import framework.base.BaseTest;
-import org.testng.annotations.Test;
+import org.junit.Test;
 import tests.list.ListSteps;
 import tests.search.SearchSteps;
 
@@ -12,7 +12,7 @@ public class CartTest extends BaseTest {
     private SearchSteps searchSteps = new SearchSteps();
 
     @Test
-    public void enterAllDataExceptForThreeDropdownBoxesAndParseThreeErrors() throws InterruptedException {
+    public void enterAllDataExceptForThreeDropdownBoxesAndParseThreeErrors() {
         searchSteps.searchBlouse();
         listSteps.submitMandatoryFields();
         cartSteps.submitMandatoryFields();
